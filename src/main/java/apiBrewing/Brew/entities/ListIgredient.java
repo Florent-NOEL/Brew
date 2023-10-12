@@ -11,11 +11,12 @@ public class ListIgredient {
     @Id
     @GeneratedValue
     private Long id;
-    @Transient
+    @OneToOne
+    @JoinColumn(name = "listingredient_levure_id", foreignKey = @ForeignKey(name = "listingredient_levure_ifk"))
     private Levure levure;
-    @Transient
+    @OneToMany(mappedBy = "id.listIgredient")
     private List<HoublonProperties> houblons;
-    @Transient
+    @OneToMany(mappedBy = "id.listIgredient")
     private List<MaltProperties> maltProperties;
 
     public ListIgredient() {
