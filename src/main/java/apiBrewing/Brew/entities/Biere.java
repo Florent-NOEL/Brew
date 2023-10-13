@@ -17,9 +17,9 @@ public class Biere {
     @Column(name = "couleur_biere")
     Integer couleurCible;
     @Column(name = "amertume_biere")
-    double amertume;
+    Double amertume;
     @Column(name = "alcool_biere")
-    double tauxAlcoolCible;
+    Double tauxAlcoolCible;
 
 
     public Biere() {
@@ -29,7 +29,7 @@ public class Biere {
         Id = id;
     }
 
-    public Biere(Long id, String nom, Integer couleurCible, double amertume, double tauxAlcoolCible) {
+    public Biere(Long id, String nom, Integer couleurCible, Double amertume, Double tauxAlcoolCible) {
         Id = id;
         this.nom = nom;
         this.couleurCible = couleurCible;
@@ -61,19 +61,19 @@ public class Biere {
         this.couleurCible = couleurCible;
     }
 
-    public double getAmertume() {
+    public Double getAmertume() {
         return amertume;
     }
 
-    public void setAmertume(double amertume) {
+    public void setAmertume(Double amertume) {
         this.amertume = amertume;
     }
 
-    public double getTauxAlcoolCible() {
+    public Double getTauxAlcoolCible() {
         return tauxAlcoolCible;
     }
 
-    public void setTauxAlcoolCible(double tauxAlcoolCible) {
+    public void setTauxAlcoolCible(Double tauxAlcoolCible) {
         this.tauxAlcoolCible = tauxAlcoolCible;
     }
 
